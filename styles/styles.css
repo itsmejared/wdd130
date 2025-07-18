@@ -16,6 +16,12 @@
   --margin-regular: 1rem;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 main {
   max-width: var(--main-width);
 }
@@ -35,20 +41,14 @@ h1 {
   color: var(--primary-color);
 }
 
-img {
-  width: var(--img-width);
-  height: auto;
-  border: 1px solid var(--border-color);
-  padding: var(--padding-small);
-  box-shadow: 0 0 30px var(--shadow-color);
-}
-
 main img {
   width: var(--img-width);
   height: auto;
   border: 1px solid var(--secondary-color);
   padding: var(--padding-small);
   box-shadow: 0 0 30px var(--shadow-color);
+  float: right;
+  margin: 0 0 1rem 1rem;
 }
 
 p {
@@ -57,12 +57,8 @@ p {
 
 aside {
   width: 20rem;
-  margin: var(--margin-regular);
-  border: 1px solid var(--aside-border);
-  padding: var(--margin-regular);
-  background-color: var(--aside-bg);
-  color: var(--text-dark);
   text-align: center;
+  position: relative;
 }
 
 aside img {
@@ -70,8 +66,27 @@ aside img {
   height: auto;
 }
 
+aside h2 {
+  position: absolute;
+  top: 20px;
+  left: 68px;
+  color: #eee;
+}
+
 footer {
   margin-top: var(--margin-regular);
   border-top: 1px solid var(--border-color);
   text-align: center;
+}
+
+/* =============================
+   Class Selectors
+   ============================= */
+
+.box {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--aside-border);
+  background-color: lavender;
+  color: darkslategray;
 }
