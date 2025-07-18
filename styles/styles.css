@@ -70,23 +70,24 @@ aside h2 {
   position: absolute;
   top: 20px;
   left: 68px;
-  color: #eee;
+  color: var(--text-light);
 }
 
 footer {
   margin-top: var(--margin-regular);
   border-top: 1px solid var(--border-color);
   text-align: center;
+  background-color: var(--aside-bg);
+  color: var(--text-dark);
+  padding: var(--padding-medium);
 }
 
-/* =============================
-   Class Selectors
-   ============================= */
+/* Class Selectors */
 
 .box {
   margin: 1rem;
   padding: 1rem;
   border: 1px solid var(--aside-border);
-  background-color: lavender;
-  color: darkslategray;
+  background-color: var(--aside-bg);
+  color: var(--text-dark);
 }
