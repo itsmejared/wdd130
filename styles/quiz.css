@@ -1,0 +1,104 @@
+:root {
+  --primary-color: #009ffd;
+  --secondary-color: navy;
+  --accent1-color: #000000;
+  --accent2-color: #ffffff;
+  --heading-font: "Oswald", sans-serif;
+  --body-font: "Roboto", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: var(--accent1-color);
+}
+
+header {
+  background-color: var(--secondary-color);
+  color: var(--accent2-color);
+  text-align: center;
+  padding: 2rem 1rem;
+  font-family: var(--heading-font);
+  letter-spacing: 1px;
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+form fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  transition: border-color 0.3s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary-color);
+  outline: none;
+  background-color: var(--accent2-color);
+}
+
+fieldset p {
+  margin: 0.5rem 0;
+  font-family: monospace;
+  background-color: var(--accent1-color);
+  color: var(--accent2-color);
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+footer {
+  margin: 0 auto;
+  margin-top: 1rem;
+  text-align: center;
+  padding: 0.5rem;
+  border-top: var(--accent2-color) solid;
+}
+button {
+  margin: 1rem 0rem;
+  background-color: var(--secondary-color);
+  color: var(--accent2-color);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 1.2rem;
+  width: 100%;
+}
