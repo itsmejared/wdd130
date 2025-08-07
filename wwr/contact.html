@@ -9,9 +9,16 @@
     <meta name="author" content="Jared Huayta">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
+    <!-- Preload and async load Google Fonts -->
+    <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+        onload="this.onload=null;this.rel='stylesheet'">
+
+    <!-- Fallback for users with JS disabled -->
+    <noscript>
+        <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap">
+    </noscript>
     <link rel="stylesheet" href="styles/rafting.css">
 </head>
 
