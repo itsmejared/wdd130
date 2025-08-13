@@ -1,15 +1,12 @@
 /* Root Variables */
 :root {
   --primary-color: #094074; /* Main brand color (dark blue) */
-  --secondary-color: #3c6997; /* Secondary blue shade */
-  --accent1-color: #33d3ff; /* Bright cyan accent */
-  --accent2-color: #ffdd4a; /* Yellow highlight accent */
-  --text-color: #eee; /* Light text for dark backgrounds */
+  --secondary-color: #009ffd; /* Secondary blue shade */
+  --accent1-color: #eeeeee; /* White accent */
+  --accent2-color: #000812; /* black navy accent */
 
-  --heading-font: "Open Sans", sans-serif; /* Font for headings */
-  --body-font: "Afacad Flux", sans-serif; /* Font for body text */
-
-  --border-color: black solid; /* Default border style */
+  --heading-font: "Oswald", sans-serif; /* Font for headings */
+  --body-font: "Roboto", sans-serif; /* Font for body text */
 
   --border-radius: 0.5rem; /* General border radius for cards/buttons */
   --spacing-unit: 1rem; /* Base spacing unit */
@@ -28,16 +25,22 @@
 
 body {
   font-family: var(--body-font);
+  color: var(--accent2-color);
+}
+
+header,
+footer {
+  background-color: var(--primary-color);
   color: var(--accent1-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 header {
-  background-color: var(--primary-color);
-  color: var(--accent2-color);
   display: grid;
-  align-items: center;
   grid-template-columns: 1fr 1fr;
-  border-bottom: 1px var(--border-color);
+  border-bottom: 1px var(--accent2-color) solid;
 }
 
 header img {
@@ -56,15 +59,15 @@ footer {
 h1,
 h2 {
   font-family: var(--heading-font);
-  color: var(--text-color);
+  color: var(--accent2-color);
 }
 
 nav,
 p,
 section,
 article {
-  margin: 16px;
-  padding: 8px;
+  margin: var(--spacing-unit);
+  padding: 0.5rem;
 }
 
 nav {
@@ -72,13 +75,14 @@ nav {
   flex-wrap: nowrap;
 }
 
-nav a {
+nav a,
+footer a {
   text-decoration: none;
   display: block;
   padding: 10px;
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--text-color);
+  color: var(--accent1-color);
 }
 
 h1 {
@@ -88,33 +92,24 @@ h1 {
   padding: 16px;
   text-align: center;
   opacity: 0.7;
-  background-color: var(--accent1-color);
+  background-color: var(--primary-color);
+  color: var(--accent1-color);
+}
+
+section {
+  text-align: center;
+  background-color: var(--secondary-color);
+  margin: 16px 0px;
 }
 
 article {
   position: absolute;
   width: 770px;
   right: 20px;
-  bottom: 0px;
-  background-color: var(--secondary-color);
-  opacity: 0.95;
-}
-
-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  bottom: 0;
   background-color: var(--primary-color);
-  color: var(--text-color);
-}
-
-footer a {
-  text-decoration: none;
-  display: block;
-  padding: 10px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  color: var(--text-color);
+  color: var(--accent1-color);
+  opacity: 0.95;
 }
 
 .socialmedia {
@@ -148,26 +143,17 @@ footer a {
   margin-top: 25px;
 }
 
-.history {
-  text-align: center;
-  background-color: var(--primary-color);
-  margin: 16px 0px;
-}
-
 .adventure {
-  text-align: center;
-  margin: 2rem auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: var(--primary-color);
 }
 
 .adventure-container {
   display: flex;
   justify-content: space-between;
   flex-wrap: nowrap;
-  gap: 1rem;
+  gap: var(--spacing-unit);
   width: 100%;
   font-weight: 700;
 }
@@ -187,7 +173,6 @@ footer a {
 .contact section {
   text-align: center;
   background-color: var(--primary-color);
-  margin: 16px 0px;
 }
 
 .contact h1 {
@@ -212,7 +197,7 @@ footer a {
 .contact-details p {
   text-align: left;
   margin: 0 20px;
-  color: var(--text-color);
+  color: var(--accent1-color);
 }
 
 .map-container {
@@ -238,7 +223,7 @@ footer a {
 
 .contact-details h2 {
   font-size: 1.8rem;
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacing-unit);
 }
 
 .profile-grid {
@@ -263,26 +248,26 @@ footer a {
   margin-top: 0.5rem;
   font-weight: bold;
   font-size: 1rem;
-  margin-bottom: 1rem;
-  color: var(--text-color);
+  margin-bottom: var(--spacing-unit);
+  color: var(--accent1-color);
 }
 .contact-form form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--spacing-unit);
 }
 
 .form-row {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--spacing-unit);
   flex-wrap: wrap;
 }
 
 .form-row label {
   width: 140px;
   font-weight: bold;
-  color: var(--text-color);
+  color: var(--accent1-color);
   text-align: left;
   padding-left: 3rem;
 }
@@ -293,7 +278,7 @@ footer a {
   width: 350px;
   padding: 0.5rem;
   font-size: 1rem;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
   border: 1px solid;
   flex: 0 0 auto;
 }
@@ -304,7 +289,7 @@ footer a {
   width: auto;
   flex: 1;
   flex-wrap: nowrap;
-  gap: 1rem;
+  gap: var(--spacing-unit);
 }
 
 .radio-group label {
@@ -320,20 +305,20 @@ footer a {
 .checkbox-row {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: var(--spacing-unit);
   margin-left: 50px;
 }
 
 .checkbox-row span {
-  color: var(--text-color);
+  color: var(--accent1-color);
 }
 
 button[type="submit"] {
-  margin: 1rem auto;
+  margin: var(--spacing-unit) auto;
   background-color: white;
   color: #003049;
   border: none;
-  border-radius: 0.5rem;
+  border-radius: var(--border-radius);
   padding: 0.75rem;
   font-size: 1.2rem;
   cursor: pointer;
