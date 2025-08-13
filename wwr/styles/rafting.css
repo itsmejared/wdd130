@@ -317,3 +317,85 @@ button[type="submit"] {
   display: block;
   width: 50%;
 }
+
+/* Trips */
+.cta {
+  padding: var(--spacing-unit);
+  background-color: var(--accent1-color);
+  color: var(--accent2-color);
+}
+
+.cta .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--accent1-color);
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+}
+.trip-details {
+  padding: var(--spacing-unit);
+}
+
+.trip-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.trip-gallery figure {
+  display: flex;
+  flex-direction: column;
+  background: var(--accent1-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.trip-gallery img {
+  width: 100%;
+  max-height: 150px;
+  display: block;
+}
+
+.trip-gallery figcaption {
+  display: flex;
+  flex-direction: column;
+  padding: 0.8rem;
+  flex-grow: 1;
+}
+
+.trip-gallery h3 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  min-height: 2.5em;
+}
+
+.trip-gallery p {
+  margin: 0;
+}
+
+.trip-details table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.trip-details th,
+.trip-details td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+}
+
+.trip-details th {
+  background-color: var(--primary-color);
+  color: var(--accent1-color);
+  font-weight: bold;
+}
+
+.trip-details tbody tr {
+  background-color: var(--accent1-color);
+}
+
+.trip-details tbody tr:nth-child(even) {
+  filter: brightness(1.1);
+}
