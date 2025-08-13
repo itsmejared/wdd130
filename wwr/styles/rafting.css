@@ -399,3 +399,82 @@ button[type="submit"] {
 .trip-details tbody tr:nth-child(even) {
   filter: brightness(1.1);
 }
+
+.cta-hero {
+  position: relative;
+  width: 100%;
+}
+
+.cta-hero .cta-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cta-hero .cta-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 2rem 1rem;
+  color: var(--accent1-color);
+  z-index: 2;
+}
+
+/* Overlay background using a pseudo-element */
+.cta-hero .cta-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-color);
+  opacity: 0.85;
+  z-index: -1;
+}
+
+.cta-hero .cta-content .btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: var(--accent1-color);
+  color: var(--accent2-color);
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: bold;
+}
+
+.home-info {
+  padding: var(--spacing-unit);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.info-grid figure {
+  display: flex;
+  flex-direction: column;
+  background: var(--accent1-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.info-grid img {
+  width: 100%;
+  max-height: 150px;
+  display: block;
+}
+
+.info-grid h3 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.info-card p {
+  margin: 0;
+}
